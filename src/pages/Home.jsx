@@ -46,9 +46,10 @@ const Home = () => {
 
 
   return (
-    <div>
-      <input ref={inputName} onChange={handleInputName} type="text" />
-      <div>
+    <div className='home'>
+      <input className='input_search' ref={inputName} onChange={handleInputName} type="text" />
+      <div className='home_container'>
+      <div className='filters'>
         <h2>filters</h2>
         <FilterPrice setPriceRange={setPriceRange}/>
         <FilterCategory setCategorySelected={setCategorySelected}/>
@@ -62,6 +63,7 @@ const Home = () => {
             />
           ))         
         }
+      </div>
       </div>
     </div>
   )
