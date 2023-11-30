@@ -17,10 +17,10 @@ const FilterCategory = ({setCategorySelected}) => {
   };
 
   return (
-    <section>
+    <section className="filter_category">
         <h3>Category</h3>
         <hr />
-        <ul>
+        <ul className="filter_category_items">
             <li onClick={()=>handleCategory('all')} >All categories</li>
             {
                 categories?.map(category => (
