@@ -1,7 +1,9 @@
 import { useDispatch, useSelector } from "react-redux"
-import { getCartThunk } from "../store/slices/cart.slice"
+import { getCartThunk, setCart } from "../store/slices/cart.slice"
 import { useEffect } from "react"
 import CartProduct from "../components/CardPage/CartProduct"
+import getConfigToken from "../utils/getTokenConfig"
+import axios from "axios"
 
 
 const CartPage = () => {
@@ -21,6 +23,18 @@ const CartPage = () => {
 
    }, 0)
 
+
+
+   const handlePurchase =()=>{
+    const url ='https://e-commerce-api-v2.academlo.tech/api/v1/purchases'
+    axios.post(url, '', getConfigToken())
+    .then(res =>{
+      console.log(res.data)
+      dispatch(setCart([]))
+    })
+    .cathc(err => console.log(err))
+   }
+
   return (
     <div>
       <h1>Cart</h1>
@@ -38,6 +52,7 @@ const CartPage = () => {
       <footer>
         <span>Total</span>
         <span>{totalPriceCart}</span>
+        <button onClick={handlePurchase}>Checkout</button>
       </footer>
     </div>
   )

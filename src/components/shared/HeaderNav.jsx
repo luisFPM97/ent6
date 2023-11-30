@@ -9,7 +9,7 @@ const HeaderNav = () => {
                 <li><Link to='/register'>Register</Link></li>
                 <li><Link to='/login'>Login</Link></li>
                 <li><Link to='/cart'>Cart</Link></li>
-                <li><Link to='/'>Purchases</Link></li>
+                <li><Link to='/purchase'>Purchases</Link></li>
             </ul>
         </nav>
     </header>

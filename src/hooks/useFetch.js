@@ -6,8 +6,10 @@ const useFetch = () => {
 
     const [infoApi, setInfoApi] = useState()
 
-    const getApi = url =>{
-        axios.get(url)
+    
+
+    const getApi = (url, config ={}) =>{
+        axios.get(url, config)
         .then(res => setInfoApi(res.data))
         .catch(err => console.log(err))
     }

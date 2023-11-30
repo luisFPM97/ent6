@@ -6,6 +6,8 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import CartPage from './pages/CartPage';
 import HeaderNav from './components/shared/HeaderNav';
+import ProtectedRoutes from './pages/ProtectedRoutes';
+import Purchase from './pages/Purchase';
 
 function App() {
   
@@ -18,7 +20,10 @@ function App() {
         <Route path="/product/:id" element={<ProductId />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/cart" element={<CartPage />} />
+        <Route element={<ProtectedRoutes/>}>
+          <Route path="/cart" element={<CartPage />} />
+          <Route path='/purchase' element={<Purchase/>}/>
+        </Route>
       </Routes>
     </div>
   );
