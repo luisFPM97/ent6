@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react'
 import ProductCard from '../components/Home/ProductCard'
 import FilterCategory from '../components/Home/FilterCategory'
 import FilterPrice from '../components/Home/FilterPrice'
+import './styles/Home.css'
 
 const Home = () => {
 
@@ -43,7 +44,6 @@ const Home = () => {
     return filterName && filterCategory && filterPrice;
   };
 
-  console.log(priceRange)
 
   return (
     <div>
@@ -53,7 +53,7 @@ const Home = () => {
         <FilterPrice setPriceRange={setPriceRange}/>
         <FilterCategory setCategorySelected={setCategorySelected}/>
       </div>
-      <div>
+      <div className='product_container'>
         {
           products?.filter(callbackFilter).map((prod) => (
             <ProductCard 

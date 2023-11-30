@@ -1,6 +1,31 @@
-iunput,label,button{
-    font-size: 1.4rem;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;1,700&display=swap');
+
+/*--reset--*/
+*{
+    box-sizing: border-box;
 }
-label{
+html{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    margin: 0;
+}
+h1,h2,h3,h4, p, ul, hr{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+ul{
+    list-style: none;
+    padding-top: 0;
+}
+input, button{
+    font-family: inherit;
+}
+img{
     display: block;
+    width: 100%;
+}
+button{
+    cursor: pointer;
 }
