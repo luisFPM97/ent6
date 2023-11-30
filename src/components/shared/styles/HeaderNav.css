@@ -178,3 +178,31 @@ li{
     justify-content: center;
     align-items: center;
 }
+.footer_cart{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    width: 100%;
+    background-color: white;
+}
+.total_cart, .total_value_cart, .btn_total_cart{
+    width: calc(100%/3);
+}
+.total_cart{
+    position: relative;
+    text-align: right;
+}
+.total_value_cart{
+    position: relative;
+    text-align: center;
+}
+.btn_total_cart{
+    font-size: 15px;
+    background-color: red;
+    padding: 0.5em;
+    border: none;
+    color: white;
+}

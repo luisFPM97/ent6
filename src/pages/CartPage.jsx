@@ -49,10 +49,10 @@ const CartPage = () => {
         }
       </div>
       <hr />
-      <footer>
-        <span>Total</span>
-        <span>{totalPriceCart}</span>
-        <button onClick={handlePurchase}>Checkout</button>
+      <footer className="footer_cart">
+        <span className="total_cart">Total</span>
+        <span className="total_value_cart">{totalPriceCart}</span>
+        <button className="btn_total_cart" onClick={handlePurchase}>Checkout</button>
       </footer>
     </div>
   )
