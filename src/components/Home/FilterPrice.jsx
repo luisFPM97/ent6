@@ -19,7 +19,7 @@ const FilterPrice = ({ setPriceRange }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(submit)}>
+    <form onSubmit={handleSubmit(submit)} className="form_price">
         <label>
             <span>From</span>
             <input {...register('from')} type="number" />
