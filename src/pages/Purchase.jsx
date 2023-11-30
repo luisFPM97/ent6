@@ -14,7 +14,7 @@ const Purchase = () => {
   
   console.log(purchases)
   return (
-    <div>
+    <div className="purchases_general">
         <h2>My Purchases</h2>
         <div>
             { 

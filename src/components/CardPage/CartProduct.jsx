@@ -20,7 +20,7 @@ const CartProduct = ({prod}) => {
             <span className="cart_product_q">{prod.quantity}</span>
             <div className="cart_product_price">
                 <span>Price</span>
-                <span>{prod.product.price}</span>
+                <span className="cart_product_price_value">{prod.product.price}</span>
             </div>
         </article>
         <button className="btn_cart_product" onClick={handleDelete}>

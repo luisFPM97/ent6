@@ -160,6 +160,10 @@ li{
     flex-direction: column;
     width: 20%;
 }
+.cart_product_price_value::before{
+    content: "$";
+    margin-right: 0.3em;
+}
 .cart_product_title{
     width: 60%;
 }
@@ -199,10 +203,55 @@ li{
     position: relative;
     text-align: center;
 }
+.total_value_cart::before{
+    content: "$";
+    margin-right: 0.3em;
+}
 .btn_total_cart{
     font-size: 15px;
     background-color: red;
     padding: 0.5em;
     border: none;
     color: white;
+}
+.purchases_general{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.purchase_item{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3em;
+    font-size: 20px;
+}
+.header_purchase{
+    width: 30%;
+}
+.img_purchase{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.purchase_title{
+    width: 40%;
+    text-align: left;
+    padding: 2em;
+}
+.purchase_q{
+    width: 10%;
+    text-align: center;
+}
+.purchase_price{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+.purchase_price::before{
+    content: "$";
+    margin-right: 0.3em;
 }
