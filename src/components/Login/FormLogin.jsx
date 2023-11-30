@@ -9,20 +9,24 @@ const FormLogin = () => {
 
     const submit = (data) =>{
         loginUser(data)
+        reset({
+          email:'',
+          password:''
+        })
     }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit(submit)}>
+    <div className="form_login">
+      <form onSubmit={handleSubmit(submit)} className="form_login_form">
         <label>
           <span>Email</span>
-          <input {...register('email')} type="email" />
+          <input className="input_login" {...register('email')} type="email" />
         </label>
         <label>
           <span>Password</span>
-          <input {...register('password')} type="password" />
+          <input className="input_login" {...register('password')} type="password" />
         </label>
-        <button>Login</button>
+        <button className="btn_login">Login</button>
       </form>
     </div>
   );
