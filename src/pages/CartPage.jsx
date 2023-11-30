@@ -15,7 +15,11 @@ const CartPage = () => {
     }, [])
     
 
-    console.log(cart)
+   const totalPriceCart = cart.reduce((acc, cv)=>{
+    const price = Number(cv.product.price)
+    return acc + price * cv.quantity
+
+   }, 0)
 
   return (
     <div>
@@ -30,6 +34,11 @@ const CartPage = () => {
           ))
         }
       </div>
+      <hr />
+      <footer>
+        <span>Total</span>
+        <span>{totalPriceCart}</span>
+      </footer>
     </div>
   )
 }

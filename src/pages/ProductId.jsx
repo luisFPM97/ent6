@@ -3,6 +3,7 @@ import ProductInfo from '../components/ProductctId/ProductInfo'
 import { useParams } from 'react-router-dom'
 import useFetch from '../hooks/useFetch'
 import SimilarProducts from '../components/ProductctId/SimilarProductos'
+import Sliderimgs from '../components/ProductctId/Sliderimgs'
 
 const ProductId = () => {
 
@@ -18,6 +19,7 @@ const ProductId = () => {
   console.log(product)
   return (
     <div>
+      <Sliderimgs product={product}/>
       <ProductInfo
         product={product}
       />
