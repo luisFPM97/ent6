@@ -42,5 +42,5 @@ export const deleteProductFromCart =(id)=>(dispatch)=>{
             dispatch(removeFromCart(id))
         })
         .catch(err => console.log(err))
-
 }
+
