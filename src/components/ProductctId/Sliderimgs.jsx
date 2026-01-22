@@ -26,14 +26,21 @@ const Sliderimgs = ({ product }) => {
       }
     };
 
+  // Manejar ambos formatos de imagen (string u objeto con .url)
+  const getImageUrl = (img) => {
+    if (typeof img === 'string') return img
+    if (img && img.url) return img.url
+    return 'https://via.placeholder.com/400?text=Sin+Imagen'
+  }
+
   return (
     <div className="slider">
         <button onClick={handlePrev} className='slider_btn slider_prev'><i className='bx bx-chevron-left'></i></button>
         <div className="slider_movable" style={objStyle}>
             {
-                product?.images.map(infoImg =>(
-                    <div className="slider_img-container">
-                        <img className="slider_img" src={infoImg.url} alt="" />
+                product?.images?.map((infoImg, index) =>(
+                    <div key={index} className="slider_img-container">
+                        <img className="slider_img" src={getImageUrl(infoImg)} alt={product?.title || ''} />
                     </div>
                 ))
             }

@@ -17,7 +17,7 @@ const SimilarProducts = ({categoryId, idProd}) => {
 
   return (
     <article>
-        <h2>similar Products t</h2>
+        <h2>Productos Similares</h2>
         <div className="product_container">
           {
             productsByCategory?.filter(prod=>prod.id!==idProd).map(product=>(

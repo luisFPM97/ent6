@@ -19,16 +19,23 @@ const FilterPrice = ({ setPriceRange }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(submit)} className="form_price">
-        <label>
-            <span>From</span>
-            <input {...register('from')} type="number" />
-        </label>
-        <label>
-            <span>To</span>
-            <input {...register('to')} type="number" />
-        </label>
-        <button>Filter</button>
+    <form onSubmit={handleSubmit(submit)} className="price-filter-form">
+        <div className="price-inputs">
+          <input 
+            {...register('from')} 
+            type="number" 
+            placeholder="Mínimo"
+            min="0"
+          />
+          <span className="price-separator">-</span>
+          <input 
+            {...register('to')} 
+            type="number" 
+            placeholder="Máximo"
+            min="0"
+          />
+        </div>
+        <button className="btn-primary" type="submit">Aplicar</button>
     </form>
   )
 }
